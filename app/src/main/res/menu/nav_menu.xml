@@ -6,6 +6,9 @@
         android:id="@+id/itemMain"
         android:title="Main" />
     <item
+        android:id="@+id/itemAbout"
+        android:title="About" />
+    <item
         android:id="@+id/itemLogOut"
         android:title="Log out" />
 

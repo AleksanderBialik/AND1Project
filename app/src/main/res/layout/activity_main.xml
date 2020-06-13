@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#46A14A" />
+            android:background="@color/colorPrimary" />
 
         <FrameLayout
             android:id="@+id/fragment_container"
@@ -26,12 +26,13 @@
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="310dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        android:foregroundGravity="left"
-        app:menu="@menu/nav_menu" />
+    android:id="@+id/nav_view"
+    android:layout_width="310dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:fitsSystemWindows="true"
+    android:foregroundGravity="left"
+    android:background="@color/colorPrimary"
+    app:menu="@menu/nav_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

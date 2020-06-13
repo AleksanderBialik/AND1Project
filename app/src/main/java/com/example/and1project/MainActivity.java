@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 import com.example.and1project.Firebase.Firebase;
+import com.example.and1project.Fragments.AboutFragment;
 import com.example.and1project.Fragments.MainFragment;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.material.navigation.NavigationView;
@@ -54,6 +55,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
             case R.id.itemMain:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MainFragment()).commit();
+                break;
+            case R.id.itemAbout:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
                 break;
             case R.id.itemLogOut:
                 AuthUI.getInstance().signOut(this).addOnCompleteListener(
