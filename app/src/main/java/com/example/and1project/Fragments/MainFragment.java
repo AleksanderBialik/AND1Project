@@ -23,7 +23,7 @@ public class MainFragment extends Fragment {
 
         TabLayout tabLayout = v.findViewById(R.id.tablayout_id);
         ViewPager viewPager = v.findViewById(R.id.viewpager_id);
-        viewPager.setOffscreenPageLimit(5);
+        viewPager.setOffscreenPageLimit(2);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
 
         adapter.AddFragment(new AddCountryFragment(), "Add Country");

@@ -59,12 +59,8 @@ public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.
     public void addToList(Country country){
 
         countryList.add(country);
+        notifyDataSetChanged();
     }
-    public void removeFromList(int index){
-
-        countryList.remove(index);
-    }
-
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 

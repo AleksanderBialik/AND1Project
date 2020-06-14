@@ -3,10 +3,10 @@ package com.example.and1project.Fragments;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -61,6 +61,15 @@ public class AddCountryFragment extends Fragment {
             viewModel.updateCountry(name);
             country.setText("");
             countrySet.add(name);
+
+            try  {
+
+                InputMethodManager imm = (InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
+
+            } catch (Exception e) {
+
+            }
 
         });
 

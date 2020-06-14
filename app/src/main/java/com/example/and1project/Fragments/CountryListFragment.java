@@ -30,7 +30,6 @@ public class CountryListFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerView);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerView.setHasFixedSize(true);
 
         viewModel = new ViewModelProvider(this).get(CountryListViewModel.class);
 
