@@ -1,6 +1,5 @@
 package com.example.and1project.Firebase;
 
-
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
@@ -35,68 +34,12 @@ import static org.hamcrest.Matchers.is;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class UiTest {
-
+public class UITestLoggedIn {
     @Rule
     public ActivityTestRule<Firebase> mActivityTestRule = new ActivityTestRule<>(Firebase.class);
 
     @Test
     public void uiTest() {
-        ViewInteraction supportVectorDrawablesButton = onView(
-                allOf(withId(R.id.email_button), withText("Sign in with email"),
-                        childAtPosition(
-                                allOf(withId(R.id.btn_holder),
-                                        childAtPosition(
-                                                withId(R.id.container),
-                                                0)),
-                                0)));
-        supportVectorDrawablesButton.perform(scrollTo(), click());
-
-        ViewInteraction textInputEditText = onView(
-                allOf(withId(R.id.email),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.email_layout),
-                                        0),
-                                0)));
-        textInputEditText.perform(scrollTo(), replaceText("olek97@gmail.com"), closeSoftKeyboard());
-
-        ViewInteraction appCompatButton = onView(
-                allOf(withId(R.id.button_next), withText("Next"),
-                        childAtPosition(
-                                allOf(withId(R.id.email_top_layout),
-                                        childAtPosition(
-                                                withClassName(is("android.widget.ScrollView")),
-                                                0)),
-                                2)));
-        appCompatButton.perform(scrollTo(), click());
-
-        ViewInteraction textInputEditText2 = onView(
-                allOf(withId(R.id.password),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.password_layout),
-                                        0),
-                                0)));
-        textInputEditText2.perform(scrollTo(), click());
-
-        ViewInteraction textInputEditText3 = onView(
-                allOf(withId(R.id.password),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.password_layout),
-                                        0),
-                                0)));
-        textInputEditText3.perform(scrollTo(), replaceText("Polak123"), closeSoftKeyboard());
-
-        ViewInteraction appCompatButton2 = onView(
-                allOf(withId(R.id.button_done), withText("Sign in"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.widget.ScrollView")),
-                                        0),
-                                4)));
-        appCompatButton2.perform(scrollTo(), click());
 
         ViewInteraction appCompatImageButton = onView(
                 allOf(withContentDescription("open"),
@@ -222,3 +165,5 @@ public class UiTest {
         };
     }
 }
+
+
